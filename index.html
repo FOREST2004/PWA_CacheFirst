@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+
+
+  <link rel="manifest" href="manifest.json" />
+
+
+
+
+  <meta charset="utf-8" />
+  <title>Menu Quán Cà Phê</title>
+  <link rel="apple-touch-icon" href="/assets/icons/192x192.png" />
+
+  <base href="/" />
+
+ 
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Menu Quán Cà Phê" />
+
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Menu Quán Cà Phê" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+ 
+  <meta name="pwa-starter-template-identity" content="menu-quan-ca-phê"/>
+
+ 
+  <link rel="icon" href="/assets/icons/icon_24.png" type="image/png" />
+
+ 
+  <link rel="stylesheet" media="(prefers-color-scheme:light)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/dist/themes/light.css">
+  <link rel="stylesheet" media="(prefers-color-scheme:dark)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/dist/themes/dark.css"
+    onload="document.documentElement.classList.add('sl-theme-dark');">
+
+  <script type="module">
+    import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
+    setBasePath('https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/');
+  </script>
+
+  <script type="module" src="/src/app-index.ts"></script>
+</head>
+
+
+
+
+
+
+
+
+<body>
+  
+  <app-index></app-index>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register(
+          '/sw.js'
+        );
+      }
+    }
+  </script>
+</body>
+
+</html>
